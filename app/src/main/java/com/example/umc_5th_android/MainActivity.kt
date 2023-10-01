@@ -5,8 +5,6 @@ import android.os.Bundle
 import com.example.umc_5th_android.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-
-    // 브랜치 테스트
     lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
