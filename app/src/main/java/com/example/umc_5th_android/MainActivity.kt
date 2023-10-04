@@ -1,5 +1,6 @@
 package com.example.umc_5th_android
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.umc_5th_android.databinding.ActivityMainBinding
@@ -12,6 +13,10 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.mainPlayerCl.setOnClickListener{
+            startActivity(Intent(this, SongActivity::class.java))
+        }
 
         supportFragmentManager.beginTransaction()
             .replace(R.id.containers, HomeFragment())
