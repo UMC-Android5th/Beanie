@@ -8,6 +8,13 @@
     tools:context=".SongActivity"
     android:orientation="vertical">
 
+  <ImageView
+      android:id="@+id/song_down"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:src="@drawable/btn_miniplayer_previous" />
+
+
   <TextView
       android:id="@+id/song_title"
       android:layout_width="wrap_content"
@@ -16,6 +23,23 @@
       android:textSize="25sp"
       android:textStyle="bold"
       android:layout_marginLeft="170dp"/>
+
+  <TextView
+      android:id="@+id/song_singer_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="가수 이름"
+      android:textSize="25sp"
+      android:textStyle="bold"
+      android:layout_marginLeft="150dp"/>
+
+  <ImageView
+      android:id="@+id/song_miniplayer_btn"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:src="@drawable/btn_miniplayer_play"
+      android:layout_marginLeft="170dp"
+      android:layout_marginTop="50dp"/>
 
 
 </LinearLayout>
