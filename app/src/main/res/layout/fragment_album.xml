@@ -5,10 +5,19 @@
     android:layout_height="match_parent"
     tools:context=".AlbumFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <ImageView
+        android:id="@+id/album_down"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/btn_miniplayer_previous" />
+
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="라일락"
+        android:textSize="30sp"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold"/>
 
 </FrameLayout>

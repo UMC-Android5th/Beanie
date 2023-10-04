@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.umc_5th_android.databinding.FragmentHomeBinding
 
-
 class HomeFragment : Fragment() {
     lateinit var binding : FragmentHomeBinding
 
@@ -17,7 +16,11 @@ class HomeFragment : Fragment() {
     ): View? {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
 
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        binding.homeAlbumImg1.setOnClickListener {
+            (context as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.containers, AlbumFragment()).commitAllowingStateLoss()
+        }
+
+        return binding.root
     }
 
 }

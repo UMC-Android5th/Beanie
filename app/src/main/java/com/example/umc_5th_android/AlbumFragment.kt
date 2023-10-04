@@ -5,19 +5,22 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.umc_5th_android.databinding.FragmentAlbumBinding
+
 class AlbumFragment : Fragment() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-    }
+  lateinit var binding: FragmentAlbumBinding
 
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_album, container, false)
+        binding = FragmentAlbumBinding.inflate(inflater, container, false)
+
+        binding.albumDown.setOnClickListener {
+            (context as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.containers, HomeFragment()).commitAllowingStateLoss()
+        }
+        return binding.root
     }
-
-
 }
