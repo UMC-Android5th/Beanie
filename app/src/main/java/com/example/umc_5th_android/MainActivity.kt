@@ -51,5 +51,7 @@ class MainActivity : AppCompatActivity() {
             }
             false
         }
+
+        val song = Song(binding.mainMiniplayerTitle.text.toString(), binding.mainMiniplayerSinger.text.toString())
     }
 }
