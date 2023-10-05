@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SongActivity">
+
+  <ImageView
+      android:id="@+id/song_down"
+      android:layout_width="50dp"
+      android:layout_height="50dp"
+      android:src="@drawable/btn_miniplayer_previous" />
+
+
+  <TextView
+      android:id="@+id/song_title"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="제목"
+      android:textSize="25sp"
+      android:textStyle="bold"
+      android:layout_marginLeft="170dp"
+      android:layout_marginTop="10dp"/>
+
+  <TextView
+      android:id="@+id/song_singer_name"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="가수 이름"
+      android:textSize="25sp"
+      android:textStyle="bold"
+      android:layout_marginLeft="150dp"
+      android:layout_marginTop="60dp"/>
+
+  <ImageView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:src="@drawable/img_album_exp2"
+      android:layout_marginTop="190dp"
+      android:layout_marginLeft="100dp"/>
+
+
+  <ImageView
+      android:id="@+id/song_miniplayer_btn"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:src="@drawable/btn_miniplayer_play"
+      android:layout_marginLeft="170dp"
+      android:layout_marginTop="500dp"/>
+
+  <ImageView
+      android:id="@+id/song_pause_btn"
+      android:layout_width="40dp"
+      android:layout_height="40dp"
+      android:src="@drawable/btn_miniplay_pause"
+      android:layout_marginLeft="170dp"
+      android:layout_marginTop="500dp"
+      android:visibility="gone"/>
+
+
+
+</FrameLayout>
