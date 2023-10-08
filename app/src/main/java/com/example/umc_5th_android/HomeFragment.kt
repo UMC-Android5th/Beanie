@@ -20,6 +20,8 @@ class HomeFragment : Fragment() {
             (context as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.containers, AlbumFragment()).commitAllowingStateLoss()
         }
 
+        // val bannerAdapter =
+
         return binding.root
     }
 
