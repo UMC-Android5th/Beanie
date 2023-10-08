@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.viewpager2.widget.ViewPager2
 import com.example.umc_5th_android.databinding.FragmentHomeBinding
 
 class HomeFragment : Fragment() {
@@ -20,7 +21,12 @@ class HomeFragment : Fragment() {
             (context as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.containers, AlbumFragment()).commitAllowingStateLoss()
         }
 
-        // val bannerAdapter =
+         val bannerAdapter = BannerVPAdapter(this)
+        bannerAdapter.addFragment(BannerFragment(R.drawable.img_home_viewpager_exp))
+        bannerAdapter.addFragment(BannerFragment(R.drawable.img_home_viewpager_exp2))
+
+        binding.homeBanner.adapter = bannerAdapter
+        binding.homeBanner.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
         return binding.root
     }

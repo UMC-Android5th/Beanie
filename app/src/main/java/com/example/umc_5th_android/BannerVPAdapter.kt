@@ -11,4 +11,9 @@ class BannerVPAdapter(fragment: Fragment):FragmentStateAdapter(fragment) {
     // 프래그먼트들을 생성해주는 함수
     override fun createFragment(position: Int): Fragment = fragmentlist[position] //0,1,2,3
 
+    fun addFragment(fragment: Fragment){
+        fragmentlist.add(fragment)
+        notifyItemInserted(fragmentlist.size-1)
+    }
+
 }
