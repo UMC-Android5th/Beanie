@@ -20,12 +20,15 @@ class AlbumFragment : Fragment() {
         binding = FragmentAlbumBinding.inflate(inflater, container, false)
 
         binding.albumDown.setOnClickListener {
-            (context as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.containers, HomeFragment()).commitAllowingStateLoss()
+            (context as MainActivity).supportFragmentManager.beginTransaction().
+            replace(R.id.containers, HomeFragment()).
+            commitAllowingStateLoss()
         }
 
-        binding.songLILAC.setOnClickListener {
-            Toast.makeText(activity, "LILAC", Toast.LENGTH_SHORT).show()
-        }
+
+        val albumAdapter = AlbumVPAdapter(this)
+        binding.albumContentVp.adapter = albumAdapter
+
         return binding.root
     }
 }
