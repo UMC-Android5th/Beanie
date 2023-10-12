@@ -1,24 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".AlbumFragment">
 
     <ImageView
         android:id="@+id/album_down"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/btn_miniplayer_previous" />
+        android:src="@drawable/btn_miniplayer_previous"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <TextView
         android:id="@+id/song_LILAC"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="라일락"
-        android:textSize="30sp"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="50dp"
-        android:textStyle="bold"/>
+        android:text="IU 5th Album 'LILAC'"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintStart_toEndOf="@id/album_down"
+        app:layout_constraintTop_toTopOf="@id/album_down"/>
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/album_singer_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="가수"
+        android:textSize="20sp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintTop_toBottomOf="@id/song_LILAC"
+        app:layout_constraintStart_toStartOf="@id/song_LILAC"
+        app:layout_constraintEnd_toEndOf="@id/song_LILAC"/>
+
+    <TextView
+        android:id="@+id/album_release_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2021.03.25 | 정규 | 댄스 팝"
+        android:textSize="20sp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/album_singer_tv"
+        app:layout_constraintStart_toStartOf="@id/album_singer_tv"
+        app:layout_constraintEnd_toEndOf="@id/album_singer_tv"/>
+
+    <ImageView
+        android:id="@+id/album_image_img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/img_album_exp2"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/album_release_tv"
+        app:layout_constraintStart_toStartOf="@id/album_release_tv"
+        app:layout_constraintEnd_toEndOf="@id/album_release_tv"/>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/album_content_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:tabIndicatorFullWidth="false"
+        app:tabSelectedTextColor="#3f3fff"
+        app:tabIndicatorColor="#3f3fff"
+        app:tabRippleColor="#00ff0000"
+        app:layout_constraintEnd_toEndOf="@id/album_image_img"
+        app:layout_constraintStart_toStartOf="@id/album_image_img"
+        app:layout_constraintTop_toBottomOf="@id/album_image_img"/>
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/album_content_vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/album_content_to"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
