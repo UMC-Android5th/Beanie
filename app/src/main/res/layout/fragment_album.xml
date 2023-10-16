@@ -8,9 +8,10 @@
 
     <ImageView
         android:id="@+id/album_down"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@drawable/btn_miniplayer_previous"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/btn_main_back_arrow"
+        android:layout_margin="10dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
