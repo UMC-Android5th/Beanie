@@ -4,6 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.umc_5th_android.Fragment.HomeFragment
+import com.example.umc_5th_android.Fragment.LockerFragment
+import com.example.umc_5th_android.Fragment.LookFragment
+import com.example.umc_5th_android.Fragment.SearchFragment
 import com.example.umc_5th_android.data.Song
 import com.example.umc_5th_android.databinding.ActivityMainBinding
 

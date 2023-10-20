@@ -1,4 +1,4 @@
-package com.example.umc_5th_android
+package com.example.umc_5th_android.Fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater

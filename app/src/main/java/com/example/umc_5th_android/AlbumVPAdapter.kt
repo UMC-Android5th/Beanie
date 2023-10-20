@@ -2,6 +2,9 @@ package com.example.umc_5th_android
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter
+import com.example.umc_5th_android.Fragment.DetailFragment
+import com.example.umc_5th_android.Fragment.SongFragment
+import com.example.umc_5th_android.Fragment.VideoFragment
 
 class AlbumVPAdapter(fragment: Fragment):FragmentStateAdapter(fragment) {
     override fun getItemCount(): Int = 3
