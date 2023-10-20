@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.umc_5th_android.data.Song
 import com.example.umc_5th_android.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
