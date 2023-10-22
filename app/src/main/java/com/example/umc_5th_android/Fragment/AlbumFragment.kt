@@ -5,7 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.umc_5th_android.AlbumVPAdapter
+import com.example.umc_5th_android.adapter.AlbumVPAdapter
 import com.example.umc_5th_android.MainActivity
 import com.example.umc_5th_android.R
 import com.example.umc_5th_android.databinding.FragmentAlbumBinding

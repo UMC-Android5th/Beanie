@@ -1,4 +1,4 @@
-package com.example.umc_5th_android
+package com.example.umc_5th_android.adapter
 
 import androidx.fragment.app.Fragment
 import androidx.viewpager2.adapter.FragmentStateAdapter

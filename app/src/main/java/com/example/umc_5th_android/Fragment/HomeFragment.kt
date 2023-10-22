@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager2.widget.ViewPager2
-import com.example.umc_5th_android.BannerVPAdapter
+import com.example.umc_5th_android.adapter.BannerVPAdapter
 import com.example.umc_5th_android.MainActivity
 import com.example.umc_5th_android.R
 import com.example.umc_5th_android.databinding.FragmentHomeBinding
