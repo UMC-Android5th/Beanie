@@ -6,7 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.umc_5th_android.adapter.AlbumVPAdapter
-import com.example.umc_5th_android.MainActivity
+import com.example.umc_5th_android.presentation.MainActivity
 import com.example.umc_5th_android.R
 import com.example.umc_5th_android.databinding.FragmentAlbumBinding
 import com.google.android.material.tabs.TabLayoutMediator

@@ -1,4 +1,4 @@
-package com.example.umc_5th_android
+package com.example.umc_5th_android.presentation
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +8,8 @@ import com.example.umc_5th_android.Fragment.HomeFragment
 import com.example.umc_5th_android.Fragment.LockerFragment
 import com.example.umc_5th_android.Fragment.LookFragment
 import com.example.umc_5th_android.Fragment.SearchFragment
+import com.example.umc_5th_android.R
+import com.example.umc_5th_android.SongActivity
 import com.example.umc_5th_android.data.Song
 import com.example.umc_5th_android.databinding.ActivityMainBinding
 
