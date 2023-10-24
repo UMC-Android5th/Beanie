@@ -22,13 +22,16 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val song = Song(binding.mainMiniplayerTitle.text.toString(), binding.mainMiniplayerSinger.text.toString())
+        val song = Song(binding.mainMiniplayerTitle.text.toString(), binding.mainMiniplayerSinger.text.toString(), 0, 60, false)
         Log.d("Song", song.title + song.singer)
 
         binding.mainPlayerCl.setOnClickListener{
             val intent = Intent(this, SongActivity::class.java)
             intent.putExtra("title", song.title)
             intent.putExtra("singer", song.singer)
+            intent.putExtra("second", song.second)
+            intent.putExtra("playTime", song.playTime)
+            intent.putExtra("isPlaying", song.isPlaying)
             startActivity(intent)
         }
 
