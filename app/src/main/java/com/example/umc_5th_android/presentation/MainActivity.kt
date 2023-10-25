@@ -9,7 +9,6 @@ import com.example.umc_5th_android.Fragment.LockerFragment
 import com.example.umc_5th_android.Fragment.LookFragment
 import com.example.umc_5th_android.Fragment.SearchFragment
 import com.example.umc_5th_android.R
-import com.example.umc_5th_android.SongActivity
 import com.example.umc_5th_android.data.Song
 import com.example.umc_5th_android.databinding.ActivityMainBinding
 
@@ -18,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setTheme(R.style.Theme_FLO)
         setContentView(R.layout.activity_main)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)

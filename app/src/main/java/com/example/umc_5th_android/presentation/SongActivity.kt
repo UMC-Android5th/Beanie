@@ -1,4 +1,4 @@
-package com.example.umc_5th_android
+package com.example.umc_5th_android.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -19,18 +19,18 @@ class SongActivity : AppCompatActivity() {
         initSong()
         setPlayer(song)
 
-        binding.songDown.setOnClickListener {
+        binding.songDownIb.setOnClickListener {
             finish()
         }
-        binding.songMiniplayerBtn.setOnClickListener {
+        binding.songMiniplayerIv.setOnClickListener {
             setPlayerStatus(false)
         }
-        binding.songPauseBtn.setOnClickListener {
+        binding.songPauseIv.setOnClickListener {
             setPlayerStatus(true)
         }
         if(intent.hasExtra("title")&&intent.hasExtra("singer")){
-            binding.songTitle.text = intent.getStringExtra("title")
-            binding.songSingerName.text = intent.getStringExtra("singer")
+            binding.songMusicTitleTv.text = intent.getStringExtra("title")
+            binding.songSingerNameTv.text = intent.getStringExtra("singer")
         }
     }
 
@@ -53,10 +53,10 @@ class SongActivity : AppCompatActivity() {
     }
 
     private fun setPlayer(song : Song){
-        binding.songTitle.text = intent.getStringExtra("title")!!
-        binding.songSingerName.text = intent.getStringExtra("singer")!!
-        binding.songStartTime.text = String.format("%02d:%02d", song.second / 60, song.second % 60)
-        binding.songEndTime.text = String.format("%02d:%02d", song.playTime / 60, song.playTime % 60)
+        binding.songMusicTitleTv.text = intent.getStringExtra("title")!!
+        binding.songSingerNameTv.text = intent.getStringExtra("singer")!!
+        binding.songStartTimeTv.text = String.format("%02d:%02d", song.second / 60, song.second % 60)
+        binding.songEndTimeTv.text = String.format("%02d:%02d", song.playTime / 60, song.playTime % 60)
         binding.songProgressSb.progress = (song.second * 1000 / song.playTime)
 
         setPlayerStatus(song.isPlaying)
@@ -66,11 +66,11 @@ class SongActivity : AppCompatActivity() {
         song.isPlaying = isPlaying
         timer.isPlaying = isPlaying
         if(isPlaying){
-            binding.songMiniplayerBtn.visibility = View.VISIBLE
-            binding.songPauseBtn.visibility = View.GONE
+            binding.songMiniplayerIv.visibility = View.VISIBLE
+            binding.songPauseIv.visibility = View.GONE
         }else{
-            binding.songMiniplayerBtn.visibility = View.GONE
-            binding.songPauseBtn.visibility = View.VISIBLE
+            binding.songMiniplayerIv.visibility = View.GONE
+            binding.songPauseIv.visibility = View.VISIBLE
         }
     }
 
@@ -98,7 +98,7 @@ class SongActivity : AppCompatActivity() {
                         }
                         if(mills % 1000 == 0f){
                             runOnUiThread{
-                                binding.songStartTime.text = String.format("%02d:%02d", second / 60, second % 60)
+                                binding.songStartTimeTv.text = String.format("%02d:%02d", second / 60, second % 60)
                             }
                             second ++
                         }
