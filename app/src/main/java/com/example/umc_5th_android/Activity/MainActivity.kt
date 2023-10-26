@@ -1,4 +1,4 @@
-package com.example.umc_5th_android.presentation
+package com.example.umc_5th_android.Activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -9,7 +9,7 @@ import com.example.umc_5th_android.Fragment.LockerFragment
 import com.example.umc_5th_android.Fragment.LookFragment
 import com.example.umc_5th_android.Fragment.SearchFragment
 import com.example.umc_5th_android.R
-import com.example.umc_5th_android.data.Song
+import com.example.umc_5th_android.Song
 import com.example.umc_5th_android.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

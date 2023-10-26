@@ -1,10 +1,10 @@
-package com.example.umc_5th_android.presentation
+package com.example.umc_5th_android.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.View
-import com.example.umc_5th_android.data.Song
+import com.example.umc_5th_android.Song
 import com.example.umc_5th_android.databinding.ActivitySongBinding
 
 class SongActivity : AppCompatActivity() {

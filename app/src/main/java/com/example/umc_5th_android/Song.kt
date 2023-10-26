@@ -1,4 +1,4 @@
-package com.example.umc_5th_android.data
+package com.example.umc_5th_android
 
 data class Song(
     val title : String = "",
