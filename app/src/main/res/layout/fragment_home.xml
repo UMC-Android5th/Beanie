@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -207,137 +208,137 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@id/home_pannel_background_iv"/>
 
-        <HorizontalScrollView
-            android:id="@+id/home_today_music_oversea_hs"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="20dp"
-            android:orientation="horizontal"
-            android:scrollbars="none"
-            android:overScrollMode="never"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_today_music_oversea">
+<!--        <HorizontalScrollView-->
+<!--            android:id="@+id/home_today_music_oversea_hs"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginBottom="20dp"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:scrollbars="none"-->
+<!--            android:overScrollMode="never"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@id/home_today_music_oversea">-->
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="horizontal">-->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical">
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:orientation="vertical">-->
 
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content">
+<!--                    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content">-->
 
-                        <ImageView
-                            android:id="@+id/home_album_img_1"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/img_album_exp2"
-                            android:scaleType="fitCenter"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"/>
+<!--                        <ImageView-->
+<!--                            android:id="@+id/home_album_img_1"-->
+<!--                            android:layout_width="150dp"-->
+<!--                            android:layout_height="150dp"-->
+<!--                            android:src="@drawable/img_album_exp2"-->
+<!--                            android:scaleType="fitCenter"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent"-->
+<!--                            app:layout_constraintStart_toStartOf="parent"-->
+<!--                            app:layout_constraintTop_toTopOf="parent"/>-->
 
-                        <ImageView
-                            android:layout_width="40dp"
-                            android:layout_height="40dp"
-                            android:layout_marginEnd="8dp"
-                            android:layout_marginBottom="5dp"
-                            android:src="@drawable/widget_black_play"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent" />
+<!--                        <ImageView-->
+<!--                            android:layout_width="40dp"-->
+<!--                            android:layout_height="40dp"-->
+<!--                            android:layout_marginEnd="8dp"-->
+<!--                            android:layout_marginBottom="5dp"-->
+<!--                            android:src="@drawable/widget_black_play"-->
+<!--                            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                            app:layout_constraintEnd_toEndOf="parent" />-->
 
 
-                    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--                    </androidx.constraintlayout.widget.ConstraintLayout>-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="LILAC"
-                        android:layout_marginTop="10dp"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"/>
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="LILAC"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textColor="@color/black"/>-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:text="아이유(IU)"
-                        android:textSize="13sp"
-                        android:textColor="#a8a8a8"/>
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="3dp"-->
+<!--                        android:text="아이유(IU)"-->
+<!--                        android:textSize="13sp"-->
+<!--                        android:textColor="#a8a8a8"/>-->
 
-                </LinearLayout>
+<!--                </LinearLayout>-->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical">
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:orientation="vertical">-->
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/img_album_exp2"/>
+<!--                    <ImageView-->
+<!--                        android:layout_width="150dp"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:scaleType="fitCenter"-->
+<!--                        android:src="@drawable/img_album_exp2"/>-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="이유빈"
-                        android:layout_marginTop="10dp"
-                        android:textColor="@color/black"/>
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="이유빈"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:textColor="@color/black"/>-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:text="Lee You-bin"
-                        android:textSize="13sp"
-                        android:textColor="#a8a8a8"/>
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="3dp"-->
+<!--                        android:text="Lee You-bin"-->
+<!--                        android:textSize="13sp"-->
+<!--                        android:textColor="#a8a8a8"/>-->
 
-                </LinearLayout>
+<!--                </LinearLayout>-->
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="20dp"
-                    android:orientation="vertical">
+<!--                <LinearLayout-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginStart="20dp"-->
+<!--                    android:orientation="vertical">-->
 
-                    <ImageView
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
-                        android:scaleType="fitCenter"
-                        android:src="@drawable/img_album_exp"
-                        />
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Soongsil"
-                        android:layout_marginTop="10dp"
-                        android:textSize="16sp"
-                        android:textColor="@color/black"/>
+<!--                    <ImageView-->
+<!--                        android:layout_width="150dp"-->
+<!--                        android:layout_height="150dp"-->
+<!--                        android:scaleType="fitCenter"-->
+<!--                        android:src="@drawable/img_album_exp"-->
+<!--                        />-->
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Soongsil"-->
+<!--                        android:layout_marginTop="10dp"-->
+<!--                        android:textSize="16sp"-->
+<!--                        android:textColor="@color/black"/>-->
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="3dp"
-                        android:text="슝슝이"
-                        android:textSize="13sp"
-                        android:textColor="#a8a8a8"/>
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="3dp"-->
+<!--                        android:text="슝슝이"-->
+<!--                        android:textSize="13sp"-->
+<!--                        android:textColor="#a8a8a8"/>-->
 
-                </LinearLayout>
+<!--                </LinearLayout>-->
 
-            </LinearLayout>
+<!--            </LinearLayout>-->
 
-        </HorizontalScrollView>
+<!--        </HorizontalScrollView>-->
 
 <!--        <ImageView-->
 <!--            android:id="@+id/home_banner"-->
@@ -350,6 +351,16 @@
 <!--            app:layout_constraintEnd_toEndOf="parent"-->
 <!--            app:layout_constraintTop_toBottomOf="@id/home_today_music_oversea_hs"/>-->
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/home_today_music_album_rv"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginTop="10dp"
+            tools:listitem="@layout/item_album"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toBottomOf="@id/home_today_music_total"/>
+
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/home_banner"
             android:layout_width="match_parent"
@@ -357,7 +368,7 @@
             android:layout_marginTop="15dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/home_today_music_oversea_hs"/>
+            app:layout_constraintTop_toBottomOf="@id/home_today_music_album_rv"/>
 
 
         <TextView
