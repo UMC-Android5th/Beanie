@@ -1,6 +1,4 @@
 package com.example.umc_5th_android
-// Song의 data clas
-
 data class Song(
     val title : String = "",
     val singer: String = "" ,
