@@ -5,12 +5,15 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.viewpager2.widget.ViewPager2
 import com.example.umc_5th_android.BannerVPAdapter
 import com.example.umc_5th_android.Activity.MainActivity
 import com.example.umc_5th_android.Album
+import com.example.umc_5th_android.AlbumRVAdapter
 import com.example.umc_5th_android.R
 import com.example.umc_5th_android.databinding.FragmentHomeBinding
+import com.google.gson.Gson
 
 class HomeFragment : Fragment() {
     lateinit var binding : FragmentHomeBinding
@@ -21,11 +24,6 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentHomeBinding.inflate(inflater, container, false)
-
-//        binding.homeAlbumImg1.setOnClickListener {
-//            (context as MainActivity).supportFragmentManager.beginTransaction().replace(R.id.containers, AlbumFragment()).commitAllowingStateLoss()
-//        }
-
 
         // 데이터 리스트 생성 더미 데이터
         albumDatas.apply{
@@ -38,6 +36,20 @@ class HomeFragment : Fragment() {
 
         }
 
+        val albumRVAdapter = AlbumRVAdapter(albumDatas)
+        binding.homeTodayMusicAlbumRv.adapter = albumRVAdapter
+        binding.homeTodayMusicAlbumRv.layoutManager = LinearLayoutManager(context, LinearLayoutManager.HORIZONTAL, false)
+
+        albumRVAdapter.setMyItemClickListener(object : AlbumRVAdapter.MyItemClickListener{
+            override fun onItemClick(album: Album) {
+                changedAlbumFragment(album)
+            }
+
+            override fun onRemoveAlbum(position: Int) {
+                albumRVAdapter.removeItem(position)
+            }
+        })
+
          val bannerAdapter = BannerVPAdapter(this)
         bannerAdapter.addFragment(BannerFragment(R.drawable.img_home_viewpager_exp))
         bannerAdapter.addFragment(BannerFragment(R.drawable.img_home_viewpager_exp2))
@@ -46,6 +58,18 @@ class HomeFragment : Fragment() {
         binding.homeBanner.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
         return binding.root
+    }
+
+    private fun changedAlbumFragment(album: Album) {
+        (context as MainActivity).supportFragmentManager.beginTransaction()
+            .replace(R.id.containers, AlbumFragment().apply {
+                arguments = Bundle().apply {
+                    val gson = Gson()
+                    val albumJson = gson.toJson(album)
+                    putString("album", albumJson)
+                }
+            })
+            .commitAllowingStateLoss()
     }
 
 }
